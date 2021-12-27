@@ -27,8 +27,23 @@ public class Cardseletor : MonoBehaviour
         List<Card> midListe = new List<Card>();
 
        System.Random ran = new System.Random();
-       midListe = deck.Facedown.OrderBy(a => ran.Next()).ToList();
-}
+       deck.Facedown.OrderBy(a => ran.Next()).ToList();
+
+     }
+
+    public void FaceUpShoffel()
+    {
+
+        List<Card> midListe = new List<Card>();
+
+        System.Random ran = new System.Random();
+        deck.FaceUp.OrderBy(a => ran.Next()).ToList();
+
+    }
+
+
+
+    
 
 
 
