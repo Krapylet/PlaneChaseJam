@@ -50,7 +50,7 @@ public class Cardseletor : MonoBehaviour
 
 
 
-    public Card PlanesWalk()
+    public void PlanesWalk()
     {
     
         
@@ -59,7 +59,6 @@ public class Cardseletor : MonoBehaviour
         aktivekort.Add((Plane)CoruntCard);
         deck.Facedown.Remove(deck.Facedown.First());
 
-        return CoruntCard;
     }
     public Card trakkort()
     {
