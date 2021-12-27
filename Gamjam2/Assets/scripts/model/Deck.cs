@@ -7,4 +7,9 @@ public class Deck : MonoBehaviour
 {
     public List<Card> Facedown;
     public List<Card> FaceUp;
+
+    public Deck() {
+        Facedown = new List<Card>();
+        FaceUp = new List<Card>();
+    }
 }

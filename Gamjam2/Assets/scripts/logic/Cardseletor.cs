@@ -15,9 +15,8 @@ public class Cardseletor : MonoBehaviour
 
     public void Awake()
     {
- 
-        deck.Facedown = AllCards.cardList;
-        deck.Facedown.ForEach(s => Debug.Log(s.name));
+        deck = new Deck();
+        deck.Facedown = new List<Card>(AllCards.cardList);
     }
 
 
