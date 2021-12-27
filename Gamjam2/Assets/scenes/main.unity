@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 266393545}
   - component: {fileID: 266393547}
   - component: {fileID: 266393546}
+  - component: {fileID: 266393548}
   m_Layer: 5
   m_Name: CurrentCard
   m_TagString: Untagged
@@ -299,6 +300,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266393544}
   m_CullTransparentMesh: 1
+--- !u!114 &266393548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266393544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd0bbb1c0b67b94f9978f29927477d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoruntCard: {fileID: 0}
+  aktivekort: []
+  deck: {fileID: 0}
 --- !u!1 &276924647
 GameObject:
   m_ObjectHideFlags: 0

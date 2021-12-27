@@ -16,6 +16,13 @@ namespace Model
 
         public int conunter { get; set; }
 
+        public enum Tybe
+        {
+            Plane = 0,
+            Phonenom = 1
+
+        }
+
         public Card()
         {
 
