@@ -7,21 +7,35 @@ using System;
 public class Cardseletor : MonoBehaviour
 {
    public Card CoruntCard;
-
+    public List<Card> aktivekort;
     public Deck deck;
 
 
-    public void trakkort()
+    public Card PlanesWalk()
     {
-
-        deck.FaceUp.Add( deck.Facedown.First());
+    
+        
         CoruntCard = deck.Facedown.First();
+
+        aktivekort.Add((Plane)CoruntCard);
         deck.Facedown.Remove(deck.Facedown.First());
 
+        return CoruntCard;
+    }
+    public Card trakkort()
+    {
+
+        deck.Facedown.Remove(deck.Facedown.First());
+
+        return CoruntCard;
     }
 
+    public void planeWalkAway()
+    {
+        deck.FaceUp.AddRange(aktivekort);
+    }
 
-    public  void FaceDownShoffel()
+    public void FaceDownShoffel()
     {
        
         List<Card> midListe = new List<Card>();
@@ -41,7 +55,48 @@ public class Cardseletor : MonoBehaviour
 
     }
 
+    public void ToPlanePåsammetid()
+    {
 
+        aktivekort = findNumberforPlanes(2);
+        
+    
+    }
+    public void femPlanePåsammetid()
+    {
+
+        aktivekort = findNumberforPlanes(5);
+
+
+    }
+
+    public List<Card> findNumberforPlanes(int skalfindens)
+    {
+        int antal = 0;
+        List<Card> resolt = new List<Card>();
+        List<Card> midListe = new List<Card>();
+
+
+        int planesFound = 0;
+
+        for(int i = 0; i <= deck.Facedown.Count || antal == skalfindens; i++){
+            Card nextCard = trakkort();
+            if (nextCard.GetType().ToString() == "Phonenom")
+            {
+                
+                midListe.Add((Phonenom)nextCard);
+            }
+            else
+            {
+                resolt.Add((Plane)nextCard);
+                antal++;
+            }
+        }
+
+        deck.Facedown.AddRange(midListe);
+
+        return resolt;
+    }
 
     
 
