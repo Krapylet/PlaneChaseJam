@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Model;
+using System;
 
+[Serializable]
 public class Phonenom : Card
 {
 
