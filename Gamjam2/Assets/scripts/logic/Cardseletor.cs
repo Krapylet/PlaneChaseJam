@@ -11,6 +11,43 @@ public class Cardseletor : MonoBehaviour
     public Deck deck;
 
 
+
+    public void LookAtthetop()
+    {
+        aktivekort.Add(deck.Facedown.First());
+        deck.Facedown.Remove(deck.Facedown.First());
+    }
+
+    public void ligTillmagePÅToppen()
+    {
+        Card kortsomSKalLiggesTilmage = aktivekort[1];
+        List<Card> midliste = new List<Card>();
+       
+        midliste.Add(kortsomSKalLiggesTilmage);
+
+        for(int i = 0; i< deck.Facedown.Count; i++)
+        {
+            midliste.Add(deck.Facedown[i]);
+        }
+
+
+        deck.Facedown = midliste;
+
+
+        aktivekort.Remove(kortsomSKalLiggesTilmage);
+    }
+
+    public void ligIBunden()
+    {
+        Card kortsomSKalLiggesTilmage = aktivekort[1];
+
+        aktivekort.Remove(kortsomSKalLiggesTilmage);
+        deck.Facedown.Add(kortsomSKalLiggesTilmage);
+    }
+
+
+
+
     public Card PlanesWalk()
     {
     
@@ -84,11 +121,11 @@ public class Cardseletor : MonoBehaviour
             if (nextCard.GetType().ToString() == "Phonenom")
             {
                 
-                midListe.Add((Phonenom)nextCard);
+                midListe.Add(nextCard);
             }
             else
             {
-                resolt.Add((Plane)nextCard);
+                resolt.Add(nextCard);
                 antal++;
             }
         }
