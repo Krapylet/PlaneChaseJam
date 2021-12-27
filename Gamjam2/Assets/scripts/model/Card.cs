@@ -7,7 +7,7 @@ namespace Model
 
 
 
-    public class Card
+    public class Card : MonoBehaviour
     {
 
         public string Name { get; set; }

@@ -4,14 +4,16 @@ using UnityEngine;
 using System.Linq;
 using Model;
 using System;
+using Unity.UI;
+using UnityEngine.UI;
+
 public class Cardseletor : MonoBehaviour
 {
-   public Card CoruntCard;
+    public Card CoruntCard;
     public List<Card> aktivekort;
     public Deck deck;
 
-
-
+ 
     public void LookAtthetop()
     {
         aktivekort.Add(deck.Facedown.First());
