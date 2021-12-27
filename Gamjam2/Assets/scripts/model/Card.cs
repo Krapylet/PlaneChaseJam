@@ -17,6 +17,18 @@ namespace Model
         [SerializeField]
         public int conunter { get; set; }
 
+        public enum Tybe
+        {
+            Plane = 0,
+            Phonenom = 1
+
+        }
+
+        public Card()
+        {
+
+        }
+
         public Card(string name, string img, int conunter)
         {
             Name = name;
