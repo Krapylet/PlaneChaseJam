@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Plane : MonoBehaviour
+using Model;
+public class Plane : Card
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+   public Plane(string Name  , string img , int conunter) : base(Name, img, conunter) {
+
         
+
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
