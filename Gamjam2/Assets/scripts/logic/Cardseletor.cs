@@ -11,6 +11,15 @@ public class Cardseletor : MonoBehaviour
     public Card CoruntCard;
     public List<Card> aktivekort;
     public Deck deck;
+    public Cards AllCards;
+
+    public void Awake()
+    {
+ 
+        deck.Facedown = AllCards.cardList;
+        deck.Facedown.ForEach(s => Debug.Log(s.name));
+    }
+
 
     public void LookAtthetop()
     {
@@ -48,12 +57,18 @@ public class Cardseletor : MonoBehaviour
 
 
 
+    public void updatebillede()
+    {
+        gameObject.GetComponent<Image>().sprite = CoruntCard.img;
+    }
+
     public void PlanesWalk()
     {
-    
+
+        deck.Facedown.ForEach(s => Debug.Log(s.name));
         
         CoruntCard = deck.Facedown.First();
-
+        updatebillede();
         aktivekort.Add(CoruntCard);
         deck.Facedown.Remove(deck.Facedown.First());
 
@@ -113,7 +128,7 @@ public class Cardseletor : MonoBehaviour
         List<Card> midListe = new List<Card>();
 
 
-        int planesFound = 0;
+ 
 
         for(int i = 0; i <= deck.Facedown.Count || antal == skalfindens; i++){
             Card nextCard = trakkort();
