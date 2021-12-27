@@ -5,10 +5,14 @@ using System;
 
 namespace Model
 {
-
+    public enum Cardtype
+    {
+        Plane = 0,
+        Phonenom = 1
+    }
 
     [Serializable]
-    public class Card
+    public class Card : ScriptableObject
     {
         [SerializeField]
         public string Name { get; set; }
@@ -17,28 +21,18 @@ namespace Model
         [SerializeField]
         public int conunter { get; set; }
 
-        public enum Tybe
-        {
-            Plane = 0,
-            Phonenom = 1
+        [SerializeField]
+        public Cardtype cardType { get; set; }
 
-        }
 
-        public Card()
-        {
 
-        }
-
-        public Card(string name, string img, int conunter)
-        {
+        public Card(string name, string img, int conunter) {
             Name = name;
             this.img = img;
             this.conunter = conunter;
+
         }
 
-
-
-        // Start is called before the first frame update
 
     }
 

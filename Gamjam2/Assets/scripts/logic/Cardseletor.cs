@@ -56,7 +56,7 @@ public class Cardseletor : MonoBehaviour
         
         CoruntCard = deck.Facedown.First();
 
-        aktivekort.Add((Plane)CoruntCard);
+        aktivekort.Add(CoruntCard);
         deck.Facedown.Remove(deck.Facedown.First());
 
         return CoruntCard;

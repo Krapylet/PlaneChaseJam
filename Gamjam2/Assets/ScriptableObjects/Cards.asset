@@ -10,7 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6149d0725f009f64fac9a7ccf637e5af, type: 3}
-  m_Name: New Phenomenons
+  m_Name: Cards
   m_EditorClassIdentifier: 
-  collectionName: 
-  Phenomens: []
+  cardList: []
