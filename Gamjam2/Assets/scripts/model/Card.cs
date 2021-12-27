@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace Model
-{
     public enum Cardtype
     {
         Plane = 0,
@@ -12,29 +10,23 @@ namespace Model
     }
 
     [Serializable]
-    public class Card : ScriptableObject
+    public class Card
     {
-        [SerializeField]
-        public string Name { get; set; }
-        [SerializeField]
-        public string img { get; set; }
-        [SerializeField]
-        public int conunter { get; set; }
+        public string name;
+        public Sprite img;
+        public int conunter;
+        public Cardtype cardType;
 
-        [SerializeField]
-        public Cardtype cardType { get; set; }
-
-
-
-        public Card(string name, string img, int conunter) {
-            Name = name;
+        public Card(string name, Sprite img, int conunter) {
+            this.name = name;
             this.img = img;
             this.conunter = conunter;
 
         }
 
-
-    }
-
 }
+
+
+
+
 

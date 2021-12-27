@@ -312,7 +312,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd0bbb1c0b67b94f9978f29927477d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoruntCard: {fileID: 0}
+  CoruntCard:
+    name: 
+    img: {fileID: 0}
+    conunter: 0
+    cardType: 0
   aktivekort: []
   deck: {fileID: 0}
 --- !u!1 &276924647
