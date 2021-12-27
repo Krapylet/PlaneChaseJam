@@ -3,44 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace Model
-{
-
+    public enum Cardtype
+    {
+        Plane = 0,
+        Phonenom = 1
+    }
 
     [Serializable]
     public class Card
     {
-        [SerializeField]
-        public string Name { get; set; }
-        [SerializeField]
-        public string img { get; set; }
-        [SerializeField]
-        public int conunter { get; set; }
+        public string name;
+        public Sprite img;
+        public int conunter;
+        public Cardtype cardType;
 
-        public enum Tybe
-        {
-            Plane = 0,
-            Phonenom = 1
-
-        }
-
-        public Card()
-        {
-
-        }
-
-        public Card(string name, string img, int conunter)
-        {
-            Name = name;
+        public Card(string name, Sprite img, int conunter) {
+            this.name = name;
             this.img = img;
             this.conunter = conunter;
+
         }
 
-
-
-        // Start is called before the first frame update
-
-    }
-
 }
+
+
+
+
 

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using Model;
 using System;
 using Unity.UI;
 using UnityEngine.UI;
@@ -13,7 +12,6 @@ public class Cardseletor : MonoBehaviour
     public List<Card> aktivekort;
     public Deck deck;
 
- 
     public void LookAtthetop()
     {
         aktivekort.Add(deck.Facedown.First());
@@ -56,7 +54,7 @@ public class Cardseletor : MonoBehaviour
         
         CoruntCard = deck.Facedown.First();
 
-        aktivekort.Add((Plane)CoruntCard);
+        aktivekort.Add(CoruntCard);
         deck.Facedown.Remove(deck.Facedown.First());
 
     }

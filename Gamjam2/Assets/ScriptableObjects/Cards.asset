@@ -1,0 +1,359 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6149d0725f009f64fac9a7ccf637e5af, type: 3}
+  m_Name: Cards
+  m_EditorClassIdentifier: 
+  cardList:
+  - name: Academy at Tolaria West
+    img: {fileID: 21300000, guid: 620bf16b7f585dd4186269c872a9cdbb, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Agyrem
+    img: {fileID: 21300000, guid: 2602c28560f6e104789f3ea126db9546, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Akoum
+    img: {fileID: 21300000, guid: 3475c9b3f313c424e8ff0c4ce5c4ced3, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Aretopolis
+    img: {fileID: 21300000, guid: 9bfe820bf1984a945a3f653ed44c938d, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Astral_Arena
+    img: {fileID: 21300000, guid: 925b4cafe54771443ae9a7980af7d064, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Bant
+    img: {fileID: 21300000, guid: c9a2e7e1dc1cc674f86ce80f40e20e0f, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Bloodhill_Bastion
+    img: {fileID: 21300000, guid: 2f42055e9a199d941adad80da55fc0f2, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Celestine Reef
+    img: {fileID: 21300000, guid: 090a3522d310b304c9ee72825d1f0fdc, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: "Chaotie_\xC6tthe"
+    img: {fileID: 21300000, guid: 38d90d5a68f0b2f49b38eff6f43807c3, type: 3}
+    conunter: 0
+    cardType: 1
+  - name: Cliffside Market
+    img: {fileID: 21300000, guid: b8aa586d1414843499ff85e3e9ac9245, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Edge_of_Malacol
+    img: {fileID: 21300000, guid: 4355ab93a9c305041b482e3bd6b7bf83, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Eloren Wilds
+    img: {fileID: 21300000, guid: a4bab87fc77d21a45b371b96c3497214, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Feeding Grounds
+    img: {fileID: 21300000, guid: f64f446f24513e64981d5904b49ef998, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Fields of Summer
+    img: {fileID: 21300000, guid: abee6aaf16b7da24d8a463cdc09200b9, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Furnace_Layer
+    img: {fileID: 21300000, guid: 30adee36637d9cb479d4b7a58e4530f2, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Gavony
+    img: {fileID: 21300000, guid: f7806a007a2906947b529dfd8e9e49f6, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Glen_Elendra
+    img: {fileID: 21300000, guid: 57a8f3e64a8b9ee418f67ff622136a78, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Glimmervoid Basin
+    img: {fileID: 21300000, guid: 4948b2015d0ee2644bef75c245dadfa2, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Goldmeadow
+    img: {fileID: 21300000, guid: ad8d16123d9bf314a984483621a9f1e2, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Grand_Ossuary
+    img: {fileID: 21300000, guid: bd4a51e64012a7c4482f766192c23d12, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Grixis
+    img: {fileID: 21300000, guid: e39096321c046e1409f0f21fdd40f041, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Grove_of_the_Dreampods
+    img: {fileID: 21300000, guid: 936fc403cff1d574d87b1a735f108e76, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Hedron_Fields_of_Agadeem
+    img: {fileID: 21300000, guid: 6622f5e076798b94aba4db086f1e9f11, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Horizon Boughs
+    img: {fileID: 21300000, guid: a1aa0a66ff0d99845aea38b3eed01f15, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Immersturm
+    img: {fileID: 21300000, guid: 2347c93da748e1b479e7d82085df5fd4, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Interplanar_Tunnel
+    img: {fileID: 21300000, guid: cbf955a7a3d415f449970d63b8b68cd5, type: 3}
+    conunter: 0
+    cardType: 1
+  - name: Isle of Vesuva
+    img: {fileID: 21300000, guid: 117fdd422fe5a75468eee3c24ba30b78, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Izzet Steam Maze
+    img: {fileID: 21300000, guid: 6fd94be5a2b7b894c9d5544f741c809f, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Jund
+    img: {fileID: 21300000, guid: 07b955077cfc5574dadb3f591e8b05e9, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Kessig
+    img: {fileID: 21300000, guid: 44cca75d4a7f00d45b678331a3108caf, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Kharasha_Foothills
+    img: {fileID: 21300000, guid: 315758271d5daac48aee0a8457465368, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Kilnspire_District
+    img: {fileID: 21300000, guid: a69e149f0f74aff419b554dbd82780d0, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Krosa
+    img: {fileID: 21300000, guid: debaadcaac4d4c3439db89e72b71838d, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Lair_of_the_Ashen_Idol
+    img: {fileID: 21300000, guid: e3946a26b1267a840806433b74fae051, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Lethe Lake
+    img: {fileID: 21300000, guid: af7682d40d5e1f84c80a5d5919db4275, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Llanowar
+    img: {fileID: 21300000, guid: c1314e2f1997ebe43a4ddc72981f5988, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Minamo
+    img: {fileID: 21300000, guid: 0e5c0a0276d500441946dc4f93cad600, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Mirrored Depths
+    img: {fileID: 21300000, guid: cfa8ebcc35344b245b02ff36429f3afe, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Morphic Tide
+    img: {fileID: 21300000, guid: bd1589f2125f3c14caf8a451b532e897, type: 3}
+    conunter: 0
+    cardType: 1
+  - name: Mount_Keralia
+    img: {fileID: 21300000, guid: 71615a3ab191dbd4bb9076fd36966f6e, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Murasa
+    img: {fileID: 21300000, guid: fed64aa22f8dc274886d6aa814e82312, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Mutual_Epiphany
+    img: {fileID: 21300000, guid: 3219d1825d51d764081311d499d2a951, type: 3}
+    conunter: 0
+    cardType: 1
+  - name: Naar Isle
+    img: {fileID: 21300000, guid: bfc1eb7faf642144b9a70748f33aafc1, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Naya
+    img: {fileID: 21300000, guid: 48719cf66d7ebe040b0e484d296e41dc, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Nephalia
+    img: {fileID: 21300000, guid: e4dd9c287f53a6946a4ce80a6f6a81c9, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: "Norn\u2019s_Dominion"
+    img: {fileID: 21300000, guid: 95bb32b382e32c048a6cfee84a29a818, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Onakke_Catacomb
+    img: {fileID: 21300000, guid: 4709c2591732dc84db28bf30c7e85361, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Orochi_Colony
+    img: {fileID: 21300000, guid: 2bb96848aa15ef144a5ada4817c8e8f8, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Orzhova
+    img: {fileID: 21300000, guid: 76605881d67c4614f8d2625e85fa7e39, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Otaria
+    img: {fileID: 21300000, guid: 58abdb65c41da1c4c977d8c875a000d0, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Panopticon
+    img: {fileID: 21300000, guid: 1d3e3938a1c2dc1459f33f901353c18d, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Planewide_Disaster
+    img: {fileID: 21300000, guid: fb78e61c776d38f43b1766ac6eeda045, type: 3}
+    conunter: 0
+    cardType: 1
+  - name: Pools of Becoming
+    img: {fileID: 21300000, guid: 8cfccf5376b50c248958243680627b94, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Prahv
+    img: {fileID: 21300000, guid: c4aa52a5bb8c5154aa912c5741c30489, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Quicksilver Sea
+    img: {fileID: 21300000, guid: a565b8bfda7cf3d4f8d15a0d15839cfe, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Raven's Run
+    img: {fileID: 21300000, guid: f3b530c11e1bb3d4ca5882a7c1c587b0, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Reality Shaping
+    img: {fileID: 21300000, guid: 21f5ce6223559074aa2ae884dbb4dd71, type: 3}
+    conunter: 0
+    cardType: 1
+  - name: Sanctum of Serra
+    img: {fileID: 21300000, guid: 7e165a926c028c447a8e92fea3232631, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Sea of Sand
+    img: {fileID: 21300000, guid: 44e3299b0309bc948a752abbdfd73fea, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Selesnya_Loft_Gardens
+    img: {fileID: 21300000, guid: 1f07fe87e8b11934b8f817c4e25c2f7d, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Shiv
+    img: {fileID: 21300000, guid: b926014a8e3a82549849a7558f62ced9, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Skybreen
+    img: {fileID: 21300000, guid: 6cd68e70dc3cc514090b93c6cc53cbf5, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Sokenzan
+    img: {fileID: 21300000, guid: 19cf5ceec4cc4734a99d82cdb69cde52, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Spatial_Merging
+    img: {fileID: 21300000, guid: 71955d83765e4954fb00d3bc9e30cbd1, type: 3}
+    conunter: 0
+    cardType: 1
+  - name: Stairs to Infinity
+    img: {fileID: 21300000, guid: 0f936aabb66ab774e89db7def237cfb4, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Stensia
+    img: {fileID: 21300000, guid: 0a605eff892b418468b0ecfe79c6b7c7, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Stronghold Furnace
+    img: {fileID: 21300000, guid: a05dab217c0da2c49bb250149597e70b, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Takenuma
+    img: {fileID: 21300000, guid: 5de1012262d066442bfa04f7bc69bf88, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Talon_Gates
+    img: {fileID: 21300000, guid: 316e60b54f9df6b46b566e7d94e885d1, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Tazeem
+    img: {fileID: 21300000, guid: 7b44dba45e571bd4ca36a130b5053ce5, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Tember City
+    img: {fileID: 21300000, guid: bccf472a568b8564488f719621e2814c, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: The Dark Barony
+    img: {fileID: 21300000, guid: 6d807146ce2accc4ba6c3ec728a9d427, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: The Eon Fog
+    img: {fileID: 21300000, guid: 3170caf9ba97b1f458c3d2ee38587477, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: The Fourth Sphere
+    img: {fileID: 21300000, guid: 0fd0c0db1e4789346a526ef7fe657762, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: The Great Forest
+    img: {fileID: 21300000, guid: 92a639948a69dc544bd8cd8a09fd0af3, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: The Hippodrome
+    img: {fileID: 21300000, guid: 1b357a70b6685014a9234a6bf3e90dd1, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: The Maelstrom
+    img: {fileID: 21300000, guid: 4e4e59034a54fa64096c3d7343de66c2, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: "The \xC6ther Flues (The Aether Flues)"
+    img: {fileID: 21300000, guid: e3ad51094a0135748a5370d97ca4ccaf, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: The_Zephyr_Maze
+    img: {fileID: 21300000, guid: 11134f9ff5e36e14994b1893d9148c59, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Time_Distortion
+    img: {fileID: 21300000, guid: 29bd223bbf9dbd842a4d76ec44b7a9f4, type: 3}
+    conunter: 0
+    cardType: 1
+  - name: Trail_of_the_Mage-Rings
+    img: {fileID: 21300000, guid: 43ae9ac75073d304e98996f67987ff32, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Truga_Jungle
+    img: {fileID: 21300000, guid: 31cdd1aab6dbf6e40ae9dc1199ba243d, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Turri Island
+    img: {fileID: 21300000, guid: 52f576788f0a9034a953dead89339406, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Undercity Reaches
+    img: {fileID: 21300000, guid: 1396c4d58e3aa42458919d996a5920ff, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Velis Vel
+    img: {fileID: 21300000, guid: fddd7fe945b975c4eb44c7c01fe80347, type: 3}
+    conunter: 0
+    cardType: 0
+  - name: Windriddle_Palaces
+    img: {fileID: 21300000, guid: 36d39dcc657d19747886dbb2374a926e, type: 3}
+    conunter: 0
+    cardType: 0
