@@ -12,6 +12,8 @@ public class Cardseletor : MonoBehaviour
     public List<Card> aktivekort;
     public Deck deck;
     public Cards AllCards;
+    public GameObject newCard;
+    public int indexafaktiv;
 
     public void Awake()
     {
@@ -53,18 +55,40 @@ public class Cardseletor : MonoBehaviour
         deck.Facedown.Add(kortsomSKalLiggesTilmage);
     }
 
+    public void updatebilledetilnæste()
+    {
+        indexafaktiv++;
+        try
+        {
+            gameObject.GetComponent<Image>().sprite = aktivekort[indexafaktiv].img;
+        }
+        catch
+        {
+
+        }
+
+    }
+
 
 
 
     public void updatebillede()
     {
-        gameObject.GetComponent<Image>().sprite = CoruntCard.img;
+            gameObject.GetComponent<Image>().sprite = CoruntCard.img;
+
+
     }
 
     public void PlanesWalk()
     {
 
-        deck.Facedown.ForEach(s => Debug.Log(s.name));
+        if(deck.Facedown.Count == 0)
+        {
+            deck.Facedown = deck.FaceUp;
+            FaceDownShoffel();
+        }
+
+  
         
         CoruntCard = deck.Facedown.First();
         updatebillede();
@@ -77,12 +101,13 @@ public class Cardseletor : MonoBehaviour
 
         deck.Facedown.Remove(deck.Facedown.First());
 
-        return CoruntCard;
+        return deck.Facedown.First();
     }
 
     public void planeWalkAway()
     {
         deck.FaceUp.AddRange(aktivekort);
+        aktivekort.Clear();
     }
 
     public void FaceDownShoffel()
@@ -91,8 +116,8 @@ public class Cardseletor : MonoBehaviour
         List<Card> midListe = new List<Card>();
 
        System.Random ran = new System.Random();
-       deck.Facedown.OrderBy(a => ran.Next()).ToList();
-
+         midListe =  deck.Facedown.OrderBy(a => ran.Next()).ToList();
+        deck.Facedown = midListe;
      }
 
     public void FaceUpShoffel()
@@ -129,22 +154,29 @@ public class Cardseletor : MonoBehaviour
 
  
 
-        for(int i = 0; i <= deck.Facedown.Count || antal == skalfindens; i++){
+        for(int i = 0; (i <= deck.Facedown.Count) && (antal < skalfindens); i++){
             Card nextCard = trakkort();
-            if (nextCard.GetType().ToString() == "Phonenom")
+            Debug.Log(nextCard.name);
+
+            if (nextCard.cardType == Cardtype.Phonenom)
             {
-                
+
+                Debug.Log("PH");
                 midListe.Add(nextCard);
             }
             else
             {
+                Debug.Log("plane");
                 resolt.Add(nextCard);
                 antal++;
+                Debug.Log(antal);
+                Debug.Log(skalfindens);
             }
         }
 
         deck.Facedown.AddRange(midListe);
 
+        Debug.Log(antal);
         return resolt;
     }
 
