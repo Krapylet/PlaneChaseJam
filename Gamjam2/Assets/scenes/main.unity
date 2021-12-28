@@ -446,6 +446,8 @@ MonoBehaviour:
   aktivekort: []
   deck: {fileID: 0}
   AllCards: {fileID: 11400000, guid: 9c5a8dd9f1a22604198e1d5645088ee1, type: 2}
+  newCard: {fileID: 2920466898972479425, guid: 23a812b60559c814d904cb22b09494c8, type: 3}
+  indexafaktiv: 0
 --- !u!1 &276924647
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165.3, y: 5.4}
+  m_AnchoredPosition: {x: 178, y: 66}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &282747205
@@ -594,7 +596,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 282747206}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 266393548}
+        m_TargetAssemblyTypeName: Cardseletor, Assembly-CSharp
+        m_MethodName: "updatebilledetiln\xE6ste"
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &282747206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -715,7 +729,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 364373266}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 266393548}
+        m_TargetAssemblyTypeName: Cardseletor, Assembly-CSharp
+        m_MethodName: "ToPlaneP\xE5sammetid"
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &364373266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1558,6 +1584,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 266393548}
+        m_TargetAssemblyTypeName: Cardseletor, Assembly-CSharp
+        m_MethodName: planeWalkAway
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1745078529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,7 +1932,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2035671421}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 266393548}
+        m_TargetAssemblyTypeName: Cardseletor, Assembly-CSharp
+        m_MethodName: PlanesWalk
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2035671421
 MonoBehaviour:
   m_ObjectHideFlags: 0
