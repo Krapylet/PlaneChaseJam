@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
-using Unity.UI;
 using UnityEngine.UI;
 
 public class Cardseletor : MonoBehaviour
@@ -81,6 +80,8 @@ public class Cardseletor : MonoBehaviour
 
     public void PlanesWalk()
     {
+
+        indexafaktiv = -1;
 
         if(deck.Facedown.Count == 0)
         {
