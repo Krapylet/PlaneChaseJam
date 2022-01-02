@@ -18,6 +18,9 @@ public class Cardseletor : MonoBehaviour
     {
         deck = new Deck();
         deck.Facedown = new List<Card>(AllCards.cardList);
+        
+
+
     }
 
 
@@ -67,7 +70,19 @@ public class Cardseletor : MonoBehaviour
         }
 
     }
+    public void updatebilledetilforie()
+    {
+        indexafaktiv--;
+        try
+        {
+            gameObject.GetComponent<Image>().sprite = aktivekort[indexafaktiv].img;
+        }
+        catch
+        {
 
+        }
+
+    }
 
 
 
@@ -93,6 +108,7 @@ public class Cardseletor : MonoBehaviour
         
         CoruntCard = deck.Facedown.First();
         updatebillede();
+        aktivekort.Clear();
         aktivekort.Add(CoruntCard);
         deck.Facedown.Remove(deck.Facedown.First());
 
@@ -134,14 +150,17 @@ public class Cardseletor : MonoBehaviour
     public void ToPlanePåsammetid()
     {
 
-        aktivekort = findNumberforPlanes(2);
+
+        findNumberforPlanes(2).ForEach(s => aktivekort.Add(s));
+
+        //aktivekort = findNumberforPlanes(2);
         
     
     }
     public void femPlanePåsammetid()
     {
+        findNumberforPlanes(5).ForEach(s => aktivekort.Add(s));
 
-        aktivekort = findNumberforPlanes(5);
 
 
     }
