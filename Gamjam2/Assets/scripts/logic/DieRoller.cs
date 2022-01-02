@@ -59,59 +59,42 @@ public class DieRoller : MonoBehaviour
                 lookForResult = false;
             }
         }
-
-        upDot = Vector3.Dot(Vector3.up, transform.up);
-        downDot = Vector3.Dot(Vector3.down, transform.up);
-        rightDot = Vector3.Dot(Vector3.right, transform.up);
-        leftDot = Vector3.Dot(Vector3.left, transform.up);
-        forwardDot = Vector3.Dot(Vector3.forward, transform.up);
-        backDot = Vector3.Dot(Vector3.back, transform.up);
-
     }
 
-    public float upDot;
-    public float downDot;
-    public float rightDot;
-    public float leftDot;
-    public float forwardDot;
-    public float backDot;
+    public Transform up;
+    public Transform down;
+    public Transform right;
+    public Transform left;
+    public Transform forward;
+    public Transform back;
 
     private void DetermineDieRoll() {
-        //Calculate dot products to up directions.
-        upDot = Vector3.Dot(Vector3.up, transform.up);
-        downDot = Vector3.Dot(Vector3.down, transform.up);
-        rightDot = Vector3.Dot(Vector3.right, transform.up);
-        leftDot = Vector3.Dot(Vector3.left, transform.up);
-        forwardDot = Vector3.Dot(Vector3.forward, transform.up);
-        backDot = Vector3.Dot(Vector3.back, transform.up);
-
-        Debug.Log("Up: " + upDot + ", down: " + downDot + ", right: " + rightDot + ", left: " + leftDot + ", forward: " + forwardDot + ", back: " + backDot);
-
         //The dot product closest to 1 is the side facing up.
-        float currentClosestDot = upDot;
         string currentClosest = "Up"; //Chaos side
+        float currentHighest = up.position.y;
 
         //Compare all the dot products and find the highest.
-        if (downDot > currentClosestDot) {
-            currentClosestDot = downDot;
+        if (down.position.y > currentHighest) {
+            currentHighest = down.position.y;
             currentClosest = "Down"; 
         }
-        if (rightDot > currentClosestDot) {
-            currentClosestDot = rightDot;
+        if (right.position.y > currentHighest) {
+            currentHighest = right.position.y;
             currentClosest = "Right";
         }
-        if (leftDot > currentClosestDot) {
-            currentClosestDot = leftDot;
+        if (left.position.y > currentHighest) {
+            currentHighest = left.position.y;
             currentClosest = "Left";
         }
-        if (forwardDot > currentClosestDot) {
-            currentClosestDot = forwardDot;
-            currentClosest = "Forward"; // Planeswalk side
+        if (forward.position.y > currentHighest) {
+            currentHighest = forward.position.y;
+            currentClosest = "Forward"; 
         }
-        if (backDot > currentClosestDot) {
-            currentClosest = "Back";
+        if (back.position.y > currentHighest) {
+            currentClosest = "Back";// Planeswalk side
         }
 
+        Debug.Log("Up : " + up.position.y + "Down : " + down.position.y + "right : " + right.position.y + "left : " + left.position.y + "forward : " + forward.position.y + "back : " + back.position.y);
         Debug.Log("Landed on " + currentClosest + " side!");
     }
 }
