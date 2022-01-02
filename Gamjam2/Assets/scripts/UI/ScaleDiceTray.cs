@@ -27,8 +27,8 @@ public class ScaleDiceTray : MonoBehaviour
         Vector3 dieBoxScale = Vector3.Scale(new Vector3(canvasRectTransform.rect.width, 0, canvasRectTransform.rect.height), canvasRectTransform.localScale);
         //Apply the scale
         back.localScale = new Vector3(dieBoxScale.x, dieBoxThickness, dieBoxScale.z); ;
-        bottom.localScale = top.localScale = new Vector3(dieBoxScale.x, cameraDist, dieBoxThickness);
-        left.localScale = right.localScale = new Vector3(dieBoxThickness, cameraDist, dieBoxScale.z);
+        bottom.localScale = top.localScale = new Vector3(dieBoxScale.x, -cameraDist, dieBoxThickness);
+        left.localScale = right.localScale = new Vector3(dieBoxThickness, -cameraDist, dieBoxScale.z);
 
         //Move the sides to fit the back
         

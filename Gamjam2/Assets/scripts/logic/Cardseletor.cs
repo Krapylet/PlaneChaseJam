@@ -13,14 +13,26 @@ public class Cardseletor : MonoBehaviour
     public Cards AllCards;
     public GameObject newCard;
     public int indexafaktiv;
+    public DieRoller dieRoller;
 
-    public void Awake()
-    {
+    public void Awake() {
         deck = new Deck();
         deck.Facedown = new List<Card>(AllCards.cardList);
-        
 
 
+        // Examples of how to add and remove dice listeners:
+        /*
+        // Define
+        Action prepackagedPlanar = delegate() { Debug.Log("Planar morning"); };
+
+        // Add
+        dieRoller.OnPlaneswalkRolled += prepackagedPlanar;
+        dieRoller.OnChaosRolled += LookAtthetop;
+        dieRoller.OnBlankRolled += () => { Debug.Log("Blank morning"); };
+
+        // Remove
+        dieRoller.OnPlaneswalkRolled -= prepackagedPlanar;
+        */
     }
 
 
