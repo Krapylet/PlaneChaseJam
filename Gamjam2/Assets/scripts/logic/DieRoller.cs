@@ -24,12 +24,17 @@ public class DieRoller : MonoBehaviour
     private bool shouldLookForResult = false;
 
     // Die sides
-    public Transform up;
-    public Transform down;
-    public Transform right;
-    public Transform left;
-    public Transform forward;
-    public Transform back;
+    [SerializeField] private Transform up;
+    [SerializeField] private Transform down;
+    [SerializeField] private Transform right;
+    [SerializeField] private Transform left;
+    [SerializeField] private Transform forward;
+    [SerializeField] private Transform back;
+
+    // tap vs drag detection
+    [SerializeField] private float tapDurationThreshold;
+    [SerializeField] private float tapThrowForce;
+    private float tapStart;
 
     private void Awake() {
         // Initialize shorthands
@@ -46,7 +51,6 @@ public class DieRoller : MonoBehaviour
             LookForResult();
         }
     }
-
 
     // ----------------------- Touch Controls ----------------------
     private void TouchControls() {
@@ -99,6 +103,8 @@ public class DieRoller : MonoBehaviour
 
     // When mouse or touch input presses down on die.
     private void OnCursorDown() {
+        tapStart = Time.time;
+
         // Set the die to follow the cursor whenever the the mouse is pressed down on the die.
         shouldFollowCursor = true;
 
@@ -110,6 +116,9 @@ public class DieRoller : MonoBehaviour
 
     // When mouse or touch input resleases the die.
     private void OnCursorUp() {
+        // Don't run if we never picked up the die in the first place
+        if (!shouldFollowCursor) return;
+
         // Stop the die from following the cursor when the cursor is released from the die, and then look for result.
         shouldFollowCursor = false;
         shouldLookForResult = true;
@@ -117,6 +126,14 @@ public class DieRoller : MonoBehaviour
         //Make the die spin another random way to prevent predicting how it will roll.
         Vector3 randomTorque = UnityEngine.Random.insideUnitSphere;
         rb.AddTorque(randomTorque * torquePower, ForceMode.Impulse);
+
+        //if die was only tapped for a short while, throw it hard in a random direction
+        float tapDuration = Time.time - tapStart;
+        if (tapDuration <= tapDurationThreshold) {
+            Vector2 randomDirection = UnityEngine.Random.insideUnitCircle;
+            Vector3 randomForce = new Vector3(randomDirection.x, 0, randomDirection.y) * tapThrowForce;
+            rb.AddForce(randomForce);
+        }
     }
 
     private void FollowCursor(Vector2 screenPos) {

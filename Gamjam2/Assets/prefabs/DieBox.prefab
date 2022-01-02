@@ -521,6 +521,8 @@ MonoBehaviour:
   left: {fileID: 8064578144151989419}
   forward: {fileID: 6365722152742417220}
   back: {fileID: 1760454734189508058}
+  tapDurationThreshold: 0.1
+  tapThrowForce: 10000
 --- !u!1 &5058236473147236015
 GameObject:
   m_ObjectHideFlags: 0
